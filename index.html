@@ -1,0 +1,167 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>HTML Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+	<style>
+		body {
+			width: 100% !important;
+			-webkit-text-size-adjust: 100%;
+			-ms-text-size-adjust: 100%;
+			margin: 0;
+			padding: 0;
+			line-height: 100%;
+            transition: .5s;
+		}
+
+		[style*="Raleway"] {font-family: 'Raleway', arial, sans-serif !important;}
+
+        p {
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+
+		img {
+			outline: none;
+			text-decoration: none;
+			border:none;
+			-ms-interpolation-mode: bicubic;
+			max-width: 100%!important;
+			margin: 0;
+			padding: 0;
+			display: block;
+		}
+    
+		table td {
+			border-collapse: collapse;
+		}
+    
+		table {
+			border-collapse: collapse;
+			mso-table-lspace: 0pt;
+			mso-table-rspace: 0pt;
+		}
+
+		.header-td {
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
+
+		.main-td {
+			padding-top: 30px;
+			padding-bottom: 15px;
+		}
+
+		.main-name {
+			padding-bottom: 15px;
+		}
+		
+		.main-description {
+			line-height: 1.4;
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+
+		.main-button {
+			padding-top: 30px;
+			padding-bottom: 30px;
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+
+		.ignore-td {
+
+		}
+	</style>
+</head>
+
+<body style="margin: 0; padding: 0; background-color: #efefef">
+	<table cellpadding="0" cellspacing="0" width="100%" >
+		<tr>
+            <td>
+                <table class="main table-600" cellpadding="0" cellspacing="0" width="600" align="center" bgcolor="#ffffff">
+					<tr>
+						<td class="padding" height="30" width="600" bgcolor="#efefef"></td>
+					</tr>
+					<tr>
+						<td class="header-td">
+							<table class="table-600" cellpadding="0" cellspacing="0" width="" align="" bgcolor="#ffffff">
+								<tr>
+									<td class="header-logo">
+										<a href="#" target="_blank" style="color: #ffffff; font-family: Arial, Helvetica, sans-serif, Raleway; font-size: 16px;"  >
+											<img src="/img/logo.png" width="600" height="60" alt="InterPress" border="0" style="display: block;" />
+										</a>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td class="padding" height="10" width="600" bgcolor="#efefef"></td>
+					</tr>
+					<tr>
+						<td class="main-td">
+							<table class="table-540" cellpadding="0" cellspacing="0" width="540" align="center" bgcolor="#ffffff">
+								<tr>
+									<td class="main-name">
+										<strong style="font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 20px; line-height: 1.3;">Привет, {{ user_name }}!</strong>
+									</td>
+								</tr>
+								<tr>
+									<td class="main-description">
+										<p style="font-family: Helvetica Neue, Helvetica, Arial, sans-serif;">Вы использовали систему восстановления на 
+											<a href="#" target="_blank" style="color: #bd0b13; font-size: 16px; font-weight: 700;text-decoration: none; border-bottom-width:1px;border-bottom-style:solid;border-bottom-color: #bd0b13;">
+												phoenix.interpress.kz
+											</a><br /><br />
+											Чтобы восстановить пароль, пожалуйста, пройдите по ссылке ниже,<br /> нажав на неё или скопировать её в адресную строку браузера:
+										</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="main-button">
+										<table class="" cellpadding="0" cellspacing="0" width="224" align="center" bgcolor="#FF5500" style="border-radius: 3px;">
+											<tr>
+												<td align="center" style="border-radius: 5px; padding-top: 15px; padding-bottom: 15px; padding-left: 30px; padding-right: 30px;">
+													<a href="#" target="_blank" style="color: #ffffff; text-decoration: none; font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 15px; font-weight: 700; line-height: 1.45;">Восстановить пароль</a> 
+												</td>
+											</tr>
+										</table>
+									</td>	
+								</tr>
+								<tr>
+									<td>
+										<p style="font-family: Helvetica Neue, Helvetica, Arial, sans-serif; padding-top: 15px; padding-bottom: 15px; line-height: 1.4;">
+											Или скопируйте ссылку и перейдите по ней:
+										</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="token-td" align="center">
+										<p style="font-family: Helvetica Neue, Helvetica, Arial, sans-serif; padding-top: 15px; padding-bottom: 15px; line-height: 1.4;">{{ jwt_token }}</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="ignore-td">
+										<p style="font-family: Helvetica Neue, Helvetica, Arial, sans-serif; padding-top: 15px; line-height: 1.4;">Если вы не запрашивали смену пароля, просто проигнорируйте это письмо.<br /><br />
+
+											Это автоматическое сообщение.<br />
+											Пожалуйста, не отвечайте.<br /><br />
+											
+											C уважением,<br />
+											команда «InterPress»</p>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+            </td>
+        </tr>
+	</table>
+</body>
+
+</html>
+
